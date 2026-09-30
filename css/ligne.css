@@ -23,9 +23,10 @@ body {
     margin-top: 20px;
     border-radius: 5px;
 h1 {
-    color: vert;
+    color: green;
     font-size: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 /* Commentaire pour forcer un commit */
+
