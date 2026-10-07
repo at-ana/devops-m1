@@ -10,8 +10,9 @@
 
   <form id="monFormulaire">
     <div class="form-group">
-      <label for="password">Mot de passe</label>
+      <label for="password">Motdepasse</label>
       <input type="password" id="password" required>
+      <p id="passwordFeedback"></p>
     </div>
 
     <button type="submit" id="submitBtn" disabled>S'inscrire</button>
@@ -33,3 +34,13 @@
 
 </body>
 </html>
+inputPassword.addEventListener('input', (e) => {
+  const estValide = validerMotDePasse(e.target.value);
+  const feedback = document.getElementById('passwordFeedback');
+
+  feedback.textContent = estValide
+    ? 'Mot de passe valide'
+    : 'Mot de passe invalide';
+
+  feedback.style.color = estValide ? 'green' : 'red';
+});
